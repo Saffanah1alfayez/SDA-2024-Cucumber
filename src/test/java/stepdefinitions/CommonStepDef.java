@@ -37,8 +37,8 @@ public class CommonStepDef {
     }
 
     @Then("I should see {string} on the results")
-    public void i_should_see_on_the_results(String string) {
-        Assert.assertFalse(driver.findElements(By.xpath("//*[contains(text(),'"+string+"')]")).isEmpty());
+    public void i_should_see_on_the_results(String searchInput) {
+        Assert.assertFalse(driver.findElements(By.xpath("//*[contains(text(),'"+searchInput+"')]")).isEmpty());
     }
 
     @Then("I close the browser")
